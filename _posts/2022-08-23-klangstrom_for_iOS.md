@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Klangstrom for iOS … Proof of Concept"
-date:   2022-08-22 18:00:00 +0100
+date:   2022-08-23 10:00:00 +0100
 ---
 
-![klangstrom_for_iOS](/assets/2022-08-23-klangstrom_for_iOS.png)   
+![klangstrom_for_iOS](/assets/2022-08-23-klangstrom_for_iOS.jpg)   
 
 <div class="video-container">
 <iframe width="750" height="562" src="https://www.youtube.com/embed/E-C6VHxmvBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
