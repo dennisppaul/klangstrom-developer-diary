@@ -4,7 +4,7 @@ title:  "Compositional Techniques: Patterns"
 date:   2022-08-30 10:00:00 +0100
 ---
 
-`0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0`    
+`0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, ...`    
 
 the past days i have been looking into techniques for ( algorithmic ) compositions.
 
