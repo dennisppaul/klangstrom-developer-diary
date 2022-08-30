@@ -10,14 +10,20 @@ the past days i have been looking into techniques for ( algorithmic ) compositio
 
 there is SOOOOooo... much stuff[^1][^2][^3] out there already. but apart from always enjoying to *reinvent the wheel*, in this endeavor i really want to put an emphasis on techniques that allow to create *articulate* compositions ( in contrast to techniques that rely mainly on controlling complexity and chaos … an interesting topic in itself ).
 
-the first technique i am exploring is using loops and patterns ( not super happy about the term *patterns* in this context ). it is basically following the modulo `%` technique: a continuously increasing counter is modified by modulo to create a repeating pattern:
+the first technique i am exploring is using loops and patterns ( not super happy about the term *patterns* in this context ). it is basically following the modulo `%` technique: a continuously increasing counter ( `COUNTER` ) is modified by modulo to create a repeating pattern. e.g a modulo of 4 ( `MODULO(4)` ):
 
 ```
 COUNTER   : 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
 MODULO(4) : 0  1  2  3  0  1  2  3  0  1  2  3  0  1  2  3
 ```
 
-if now tested again e.g `0` an *event* ( i.e test returns `true` ) occurs every 4 ticks or beats or counter increments. 
+if now tested again e.g `0` an *event* ( `EVENT(0)` ) ( i.e test returns `true` ) occurs every 4 ticks or beats or counter increments. 
+
+```
+COUNTER   : 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+MODULO(4) : 0  1  2  3  0  1  2  3  0  1  2  3  0  1  2  3
+EVENT(0)  : +  -  -  -  +  -  -  -  +  -  -  -  +  -  -  -  
+```
 
 this very, very common technique is the basis for the `Loop` and `Pattern` classes ( for now only available in [Wellen](https://github.com/dennisppaul/wellen) ). 
 
