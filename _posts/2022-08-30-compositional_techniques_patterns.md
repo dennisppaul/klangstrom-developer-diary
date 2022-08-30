@@ -17,7 +17,7 @@ COUNTER   : 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
 MODULO(4) : 0  1  2  3  0  1  2  3  0  1  2  3  0  1  2  3
 ```
 
-if now tested again e.g `0` an *event* ( `EVENT(0)` ) ( i.e test returns `true` ) occurs every 4 ticks or beats or counter increments. 
+if now tested again e.g `0` an *event* ( `EVENT(0)` ) ( i.e `+` or test returns `true` ) occurs every 4 ticks or beats or counter increments. 
 
 ```
 COUNTER   : 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
