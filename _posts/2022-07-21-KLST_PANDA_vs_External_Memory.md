@@ -27,7 +27,7 @@ when the smoke has cleared i am left with an external RAM memory extension conne
 - connect external memory via Octo-SPI interface
 - STM32H73x MCU have 2 Octo-SPI interface but only one is available ( due to other peripherals )
 - try to use the IC specified by ST i.e `S70KL1281DABHI023` ( 128Mb(=16MB), 3V3 ). there are quite a few subtle differences.
-- Octo-SPI RAM can be memory mapped and used ( almost ) like internal RAM ( e.g `Octo-SPI1` > `0x90000000`–`0x9FFFFFFF` )
+- Octo-SPI RAM can be memory mapped and used ( almost ) like internal RAM ( e.g `Octo-SPI1` > `0x90000000`–`0x9FFFFFFF` i.e `0xFFFFFFF * 4 = 1073741820 bytes ≈ 1GB address space` )
 - look into *Master Direct Aemory Access controller* (MDMA) + *Memory Protection Unit* (MPU)
 - Octo-SPI RAM can be used as frame buffer for LCDisplays
 - 16MB ( or 128Mb ) equal approx 90sec of audio data ( 32f ): `(128Mb*1024*1024/8bits)/(48000Hz*1Channel*4bytes) = 87,4sec`
