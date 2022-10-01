@@ -27,11 +27,11 @@ when the smoke has cleared i am left with an external RAM memory extension conne
 - connect external memory via Octo-SPI interface
 - STM32H73x MCU have 2 Octo-SPI interface but only one is available ( due to other peripherals )
 - try to use the IC specified by ST i.e `S70KL1281DABHI023` ( 128Mb(=16MB), 3V3 ). there are quite a few subtle differences.
-- Octo-SPI RAM can be memory mapped and used ( almost ) like internal RAM ( e.g `Octo-SPI1` > `0x90000000`–`0x9FFFFFFF` i.e `0xFFFFFFF * 4 = 1073741820 bytes ≈ 1GB address space` )
+- Octo-SPI RAM can be memory mapped and used ( almost ) like internal RAM ( e.g `Octo-SPI1` > `0x90000000`–`0x9FFFFFFF` i.e `0xFFFFFFF*4 = 1073741820bytes ≈ 1GB address space` )
 - look into *Master Direct Aemory Access controller* (MDMA) + *Memory Protection Unit* (MPU)
 - Octo-SPI RAM can be used as frame buffer for LCDisplays
-- 16MB ( or 128Mb ) equal approx 90sec of audio data ( 32f ): `(128Mb*1024*1024/8bits)/(48000Hz*1Channel*4bytes) = 87,4sec`
-- LCD framebuffer (RGB888) would require 225KB: `320*240*3/1024/1024 = 225KB = 0.22MB`
+- 16MB ( or 128Mb ) equal approx 90sec of audio data ( 32f ): `(128Mb*1024*1024/8bits)/(48000Hz*1Channel*4bytes) ≈ 87,4sec`
+- LCD framebuffer (RGB888) would require 225KB: `320*240*3/1024/1024 = 225KB ≈ 0.22MB`
 - read *Octo-SPI interface on STM32 microcontrollers (AN5050)* + *STM32H72x, … system architecture and performance (AN4891)*
 
 it is soooo important to test on *STM32H735G-DK* first. especially the combination of LCD and sound is crucial to be tested. also make sure to look into existing examples.
