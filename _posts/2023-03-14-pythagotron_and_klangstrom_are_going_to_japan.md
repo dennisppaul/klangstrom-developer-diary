@@ -10,14 +10,14 @@ Ali Böll and his Pythagotron invited me to join him in Kobe, Japan and perform 
 
 *Klangstrom* appears as:
 
-![The Gymnast](/assets/2023-03-14-TheGymnast.png){: width="474" }    
+![The Gymnast](/assets/2023-03-14-TheGymnast.png){: width="236" }    
 **The Gymnast** that does exercises on vowels
 
-![The Vocalizer](/assets/2023-03-14-TheVocalizer.png){: width="474" }    
+![The Vocalizer](/assets/2023-03-14-TheVocalizer.png){: width="236" }    
 **The Vocalizer** that sings whatever is spoken into it
 
-![The Terminalist](/assets/2023-03-14-TheTerminalist.png){: width="474" }    
+![The Terminalist](/assets/2023-03-14-TheTerminalist.png){: width="236" }    
 **The Terminalist** that sings words from the command-line interface
 
-![The Typist](/assets/2023-03-14-TheTypist.png){: width="474" }    
+![The Typist](/assets/2023-03-14-TheTypist.png){: width="236" }    
 **The Typist** that sonifies whatever is typed on a keyboard
