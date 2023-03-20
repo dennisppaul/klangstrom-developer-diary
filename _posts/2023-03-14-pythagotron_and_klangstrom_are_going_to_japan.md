@@ -21,3 +21,5 @@ Ali Böll and his Pythagotron invited me to join him in Kobe, Japan and perform 
 
 ![The Typist](/assets/2023-03-14-TheTypist.png){: width="236" }    
 **The Typist** that sonifies whatever is typed on a keyboard
+
+![2023-03-14-pythagotron_and_klangstrom_are_going_to_japan](/assets/2023-03-14-pythagotron_and_klangstrom_are_going_to_japan-2.jpg)
