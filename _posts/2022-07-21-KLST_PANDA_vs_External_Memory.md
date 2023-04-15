@@ -8,17 +8,21 @@ adding external memory to KLST_PANDA design … it s complicated
 
 as it turns out there a more than one way to add external memory into a system. i have narrowed down my research to *Octo-SPI* and *Flexible Memory Controller* (FMC) interfaces.
 
-FMC looks more like the *traditional* way of connecting external memory ICs. it is a more or less a parallel connecting of the memory IC to the MCU including all advantages and disadvantages of parallel connections: high speeds but also high number of pins. in contrast the *Octo-SPI* interface seems to be a bit more exclusive ( and in it s special variant HyperRAM™ even proprietary ). also the number of available memory ICs that implement *Octo-SPI* appears to be much lower than for FMC.
+FMC looks more like the *traditional* way of connecting external memory ICs. it is more or less a parallel connection of the memory IC to the MCU including all advantages and disadvantages of parallel connections: high speeds but also high number of pins. in contrast the *Octo-SPI* interface seems to be a bit more exclusive ( and in it s special variant HyperRAM™ even proprietary ). also the number of available memory ICs that implement *Octo-SPI* appears to be much lower than for FMC.
 
 however, despite the potential better performance and the greater choice of memory ICs, i decided to opt for the HyperRAM™ way. the main reason being the lower demands in hardware resources. a few notes from my reseach and thinking process:
 
-## notes (20220714)
+## notes (20230408)
 
-*STM32H735G-DK* uses two kinds of memory: *FLASH* and *RAM* both memories are interfaced via *Octo-SPI* and *HyperRAM™* interfaces. note that *STM32H743I-EVAL* and *STM32H753I-EVAL* implements *SDRAM* memory via *FMC* interface.
+i have rendered a final decision and that is to use the following component: `APS12808L-3OBM-BA`. it has the following features:
 
-for KLST audio applications FLASH memory is not suitable. therefore only the RAM version can be considered. however, suppliers are very short on memory ICs ( @JLCPCB there is literally no *DRAM* in stock ).
+- 16MB ( i.e 128Mbit )
+- *Octo-SPI/HyperRAM™* interface
+- 100 MHz
+- 3.3V
+- suggested alternative in *UM2679 Discovery kit with STM32H735IG MCU*
 
-however, there are a few SDRAM chips in stock. however, however the FMC interface needs many more resources ( in case of *STM32H743I-EVAL* it requires 55 pins )! therefore i would stick with *HyperRAM™* for now. PS ( DaisySeed seems to be using *AS4C16M16SA* SDRAM chip … which is currently available at JLCPCB ).
+it is half the price ( at JLCPCB Parts i.e Mouser ) and it appears to be faster.
 
 ## notes (20220716)
 
@@ -50,6 +54,14 @@ it is soooo important to test on *STM32H735G-DK* first. especially the combinati
 - 02    :: Model Number == Standard 6×8×1.0 mm package ( VAA024 )
 - 3     :: Packing Type == Tape and Reel
 
+## notes (20220714)
+
+*STM32H735G-DK* uses two kinds of memory: *FLASH* and *RAM* both memories are interfaced via *Octo-SPI* and *HyperRAM™* interfaces. note that *STM32H743I-EVAL* and *STM32H753I-EVAL* implements *SDRAM* memory via *FMC* interface.
+
+for KLST audio applications FLASH memory is not suitable. therefore only the RAM version can be considered. however, suppliers are very short on memory ICs ( @JLCPCB there is literally no *DRAM* in stock ).
+
+however, there are a few SDRAM chips in stock. however, however the FMC interface needs many more resources ( in case of *STM32H743I-EVAL* it requires 55 pins )! therefore i would stick with *HyperRAM™* for now. PS ( DaisySeed seems to be using *AS4C16M16SA* SDRAM chip … which is currently available at JLCPCB but not compatible with HyperRAM/OCTOSPI ).
+
 ## references
 
 - [STM32H72x, STM32H73x, and single-core STM32H74x/75x system architecture and performance (AN4891)](https://www.st.com/resource/en/application_note/an4891-stm32h72x-stm32h73x-and-singlecore-stm32h74x75x-system-architecture-and-performance-stmicroelectronics.pdf)
@@ -67,3 +79,4 @@ what is the correct way of writing *Octo-SPI* anyway?
 - OCTO-SPI
 
 from what i am seeing in written documents in text `Octo-SPI` is the most common version and `OCTOSPI` is often used when to reference the actual hardware component.
+
