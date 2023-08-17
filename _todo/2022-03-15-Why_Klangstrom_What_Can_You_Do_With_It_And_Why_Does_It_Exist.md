@@ -22,7 +22,7 @@ from on more pragmetic *Klangstrom* can be used to build stand-alone synthesizer
 ![MUTABLE_INSTRUMENTS_CLOUDS](/assets/2022-03-15-MUTABLE_INSTRUMENTS_CLOUDS.jpg)      
 ( MUTABLE INSTRUMENTS CLOUDS )
 
-it is not such a big step from standalone synthesizers to modules that are integrated into *Eurorack* setups ( i.e adapt power supply and input+output levels ). AAMOF we are currently working on extensions to *Klangstrom* that allow *Klangstrom* to produce and process controll and sound signals in an modular synthesizer context. and although it is not the focus or scope of *Klangstrom* it might still be worth noting that e.g KLST_SHEEP can run the code of ( some? ) Mutable Instruments modules e.g Braids, Plaids and Clouds ( they share a similar MCU ).
+it is not such a big step of standalone synthesizers to modules that are integrated into *Eurorack* setups ( i.e adapt power supply and input+output levels ). AAMOF we are currently working on extensions to *Klangstrom* that allow *Klangstrom* to produce and process controll and sound signals in an modular synthesizer context. and although it is not the focus or scope of *Klangstrom* it might still be worth noting that e.g KLST_SHEEP can run the code of ( some? ) Mutable Instruments modules e.g Braids, Plaids and Clouds ( they share a similar MCU ).
 
 ![](/assets/2022-03-15-TEENAGE_ENGINEERING_PO-14.jpg)   
 ( TEENAGE_ENGINEERING_PO-14 )
