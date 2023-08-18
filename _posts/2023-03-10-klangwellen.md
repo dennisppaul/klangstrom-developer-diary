@@ -4,7 +4,7 @@ title:  "KlangWellen"
 date:   2023-03-10 10:00:00 +0100
 ---
 
-after contemplating the thoughts from [[2022-09-13-atoms_and_nodes_in_klang.md]] i decided to created an independent library: `KlangWellen`.
+after contemplating the thoughts from [2022-09-13-atoms_and_nodes_in_klang]({% post_url 2022-09-13-atoms_and_nodes_in_klang %}) i decided to created an independent library: `KlangWellen`.
 
 the main idea of the library is to facilitate lightweight DSP functionality. where lightweight means that the library should be easy to use and does not make use of any high-level design or programming concepts i.e no *node* structure ( like `Klang` ) and no advanced class structures or programming gymnastics. 
 
