@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Finished-routing_KLST_PANDA"
+title:  "Finished routing KLST_PANDA"
 date:   2023-10-05 18:00:00 +0100
 ---
 
