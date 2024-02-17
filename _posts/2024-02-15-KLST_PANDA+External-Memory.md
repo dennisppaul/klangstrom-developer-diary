@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "KLST_PANDA External Memory"
-date:   2024-02-12 18:00:00 +0100
+title:  "KLST_PANDA + External Memory"
+date:   2024-02-15 18:00:00 +0100
 ---
 
 ![KLST_PANDA--front-with-screen](/assets/2024-02-08-KLST_PANDA+External-Memory.jpg)

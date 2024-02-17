@@ -1,14 +1,16 @@
 ---
 layout: post
 title:  "KLST_PANDA + Display"
-date:   2024-02-13 18:00:00 +0100
+date:   2024-02-17 10:00:00 +0100
 ---
 
-@todo(add GIF of display)
+![KLST_PANDA--front-with-screen](/assets/2024-02-17-KLST_PANDA-display.mov.gif){:width="100%"}
 
 KLST_PANDA features [ER-TFT043A2-3](https://www.buydisplay.com/download/manual/ER-TFT043A2-3_Datasheet.pdf) ( with [ST7282](https://www.buydisplay.com/download/ic/ST7282.pdf ) TFT-LCD SOC Driver interfaced via LTDC ) a 4.3" TFT LCD with a resolution of 480×272px, a capacitive touch panel via controller [FT5206](https://www.buydisplay.com/download/ic/FT5206.pdf) ( via I2C ) and a dimmable ( via PWM ) backlight driver [CAT4139TD-GT3](https://www.onsemi.com/download/data-sheet/pdf/cat4139-d.pdf).
 
 the display is interfaced via the on-board LTDC driver with a parallel 24-bit interface and connected to the board via a 40-pin FPC connector.
+
+![KLST_PANDA--front-with-screen](/assets/2024-02-17-KLST_PANDA-display-off.mov.gif){:width="100%"}
 
 ## Configuring LTDC
 
@@ -32,7 +34,7 @@ the `ST7282` datasheet in section 10.1.1 (p60) suggests the following typical ti
 
 ( `H` is equal to `Line` )
 
-the LTDC clock is configured to run at `9.5MHz` to achieve a framerate of `60Hz`:
+the LTDC clock is configured to run at approx `9.5MHz` to achieve a framerate of `60Hz`:
 
 ```
 LTDC Clock Rate ( in MHz )
@@ -47,7 +49,7 @@ LTDC Clock Rate ( in MHz )
 
 the firmware implements a double buffering technique. the current buffer can be switched with a function that may look like this:
 
-```cpp
+```
 #define FRAMEBUFFER1 0
 #define FRAMEBUFFER2 1
 #define FRAMEBUFFER1_ADDR (DISPLAY_FRAMEBUFFER_ADDRESS)
@@ -87,7 +89,7 @@ a DMA2D transfer can be initiated with the HAL function `HAL_DMA2D_Start(DMA2D_H
 
 a function to fill a rectangular region with a single 32-bit color ( stored in a *register* in `ARGB` color format ) may look like this:
 
-```cpp
+```
 void DMA2D_FillRect(uint32_t color, uint32_t x, uint32_t y, uint32_t width, uint32_t height) {
 	hdma2d.Instance = DMA2D;
 	hdma2d.Init.Mode = DMA2D_R2M;
@@ -95,19 +97,15 @@ void DMA2D_FillRect(uint32_t color, uint32_t x, uint32_t y, uint32_t width, uint
 	hdma2d.Init.OutputOffset = DISPLAY_WIDTH - width;
 	HAL_DMA2D_Init(&hdma2d);
 	HAL_DMA2D_ConfigLayer(&hdma2d, 0);
-	HAL_DMA2D_ConfigLayer(&hdma2d, 1);
+	HAL_DMA2D_ConfigLayer(&hdma2d, 1); // @TODO(investigate the roles of `HAL_DMA2D_ConfigLayer(&hdma2d, ...);`
 	HAL_DMA2D_Start(&hdma2d, 
 	                color, 
 	                LTDC_get_backbuffer_address() + (x + y * DISPLAY_WIDTH) * 4, 
 	                width, 
 	                height);
-	HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+	HAL_DMA2D_PollForTransfer(&hdma2d, 10); // @TODO(investigate the role of `HAL_DMA2D_PollForTransfer(DMA2D_HandleTypeDef, uint32_t)`)
 }
 ```
-
-==@TODO(investigate the role of `HAL_DMA2D_PollForTransfer(DMA2D_HandleTypeDef, uint32_t)`)==
-
-==@TODO(investigate the role of `HAL_DMA2D_ConfigLayer(&hdma2d, 0); HAL_DMA2D_ConfigLayer(&hdma2d, 1);`)==
 
 ## Syncing to Vertical Blanking
 
@@ -115,9 +113,18 @@ a *reload* of the LTDC configuration at the next vertical blanking (VBLANK) can 
 
 ## Configuring Touch Screen Driver
 
-==@todo==
+the capacitive touch panel is intaced with the controller `FT5206` via I2C ( `I2C4` ) as well as a GPIO capable of generating an interrupt on touch on timer `TIM4_CH2`.
+
+the touch driver is widely used and the communication with quite simple. 
+
+## Backlight
+
+the backlight of the display is driven by an [`CAT4139TD-GT3`](https://www.onsemi.com/download/data-sheet/pdf/cat4139-d.pdf) IC. the brightness is controlled via a PWM driven GPIO pin on timer `TIM3`.
 
 ## References
 
 - [LCD-TFT display controller (LTDC) on STM32 MCUs (AN4861)](https://www.st.com/resource/en/application_note/an4861-lcdtft-display-controller-ltdc-on-stm32-mcus-stmicroelectronics.pdf)
 - [STM32H723/733 Reference manual (RM0468)](https://www.st.com/resource/en/reference_manual/rm0468-stm32h723733-stm32h725735-and-stm32h730-value-line-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
+- [Display Driver IC `ST7282`](https://www.buydisplay.com/download/ic/ST7282.pdf)
+- [Backlight Driver IC `CAT4139TD-GT3`](https://www.onsemi.com/download/data-sheet/pdf/cat4139-d.pdf)
+- [Touch Panel Controller `FT5206`](https://www.buydisplay.com/download/ic/FT5206.pdf)
