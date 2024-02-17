@@ -4,7 +4,7 @@ title:  "KLST_PANDA + External Memory"
 date:   2024-02-15 18:00:00 +0100
 ---
 
-![KLST_PANDA--front-with-screen](/assets/2024-02-08-KLST_PANDA+External-Memory.jpg)
+![KLST_PANDA--front-with-screen](/assets/2024-02-15-KLST_PANDA+External-Memory.jpg)
 
 KLST_PANDA features a DRAM (PSRAM) *S70KL1282* 128MBit ( i.e 16MB ) memory connected via HyperRAM™ ( on `OCTOSPI1` ).
 

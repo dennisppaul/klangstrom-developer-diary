@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "KLST_PANDA v1.0a Errata"
-date:   2024-02-06 18:00:00 +0100
+date:   2024-02-05 18:00:00 +0100
 ---
 
 here i will shamelessly collect all the things that are wrong, not ideal or not perfect in version v1.0a of KLST_PANDA. this list will be updated as i continue to test modules.

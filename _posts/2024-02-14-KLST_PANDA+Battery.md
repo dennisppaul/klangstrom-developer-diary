@@ -4,7 +4,7 @@ title:  "KLST_PANDA + Battery"
 date:   2024-02-14 10:00:00 +0100
 ---
 
-![KLST_PANDA--front-with-screen](/assets/2024-02-12-KLST_PANDA-is-Looking-Good-02.jpg)
+![KLST_PANDA--front-with-screen](/assets/2024-02-02-KLST_PANDA-is-Looking-Good-02.jpg)
 
 quite straight forward was the integration of the [`18650`](https://en.wikipedia.org/wiki/18650_battery) rechargeable lithium-ion battery. 
 
