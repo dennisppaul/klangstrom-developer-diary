@@ -10,9 +10,9 @@ date:   2024-02-06 10:00:00 +0100
 4. [x] display
 5. [x] audiocodec
 6. [-] on-board microphone
-7. [ ] rotary encoder
-8. [ ] mechanical key
-9. [ ] SD Card
-10. [ ] MIDI
-11. [ ] IDC serial connector
+7. [x] rotary encoder
+8. [x] mechanical key
+9. [x] SD Card
+10. [-] MIDI
+11. [-] IDC serial connector
 12. [ ] USB device + host
