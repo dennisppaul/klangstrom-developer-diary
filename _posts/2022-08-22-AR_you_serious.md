@@ -76,7 +76,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-we can now compile `testlib.c` and link it againt `libcodec.a` and the run it with the following commands:
+we can now compile `testlib.c` and link it against `libcodec.a` and run it with the following commands:
 
     $ gcc testlib.c libcodec.a -o testapp 
     $ ./testapp
@@ -104,7 +104,7 @@ collect2: error: ld returned 1 exit status
 
 well, riddle me this!
 
-in summary, the problem i encountered while porting to *linux* was basicially due to the fact that my *macOS* build script passed the `core.a` library ( which the Arduino Environment creates during the build process ) before the sketch. this worked fine on *macOS* but not on *linux*. simple.
+in summary, the problem i encountered while porting to *linux* was basically due to the fact that my *macOS* build script passed the `core.a` library ( which the Arduino Environment creates during the build process ) before the sketch. this worked fine on *macOS* but not on *linux*. simple.
 
 ---
 
@@ -125,6 +125,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
 *macOS*:
+
 ```
 $ uname -a
 Darwin d3BookPro.local 21.6.0 Darwin Kernel Version 21.6.0: Sat Jun 18 17:07:25 PDT 2022; root:xnu-8020.140.41~1/RELEASE_X86_64 x86_64
