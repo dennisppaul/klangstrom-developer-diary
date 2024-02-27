@@ -33,7 +33,7 @@ a quick round up shows that the following KLST_PANDA GPIO pins are usable for pe
 
 once a GPIO pin is configured as `GPIO_EXTI` and the interrupt is enabled ( in this case on *falling* and *rising* edges ) the callback `HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)` is called in case of an external event ( i.e button pressed or released ). note that the callback only supplies the pin ID not the port. they share the same interrupt line. i.e pins with similar IDs but different ports can not be distinguished[^3]. an example implementation for a button could look like this:
 
-```cpp
+```
 #define _MECH_BUTTON_00_Pin GPIO_PIN_14
 #define _MECH_BUTTON_00_GPIO_Port GPIOD
 bool MECH_00_state = false;
