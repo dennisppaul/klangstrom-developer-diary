@@ -19,7 +19,7 @@ the rough description of the changes compared to KLST_SHEEP are as follows:
 - 64MB SDRAM
 - built-in TFT display ( directly on PCB + maybe parallel interface )
 - SD Card with SDIO/SDMMC support
-- STM32H7II MCU ( as used in KLST_CORE with enought pins for SDRAM and *parallel* display interface ) 
+- STM32H7II MCU ( as used in KLST_CORE with enough pins for SDRAM and *parallel* display interface ) 
 - battery holder ( 18650 cells ) + charger circuit
 - USB-C connector
 - black&white PCB
