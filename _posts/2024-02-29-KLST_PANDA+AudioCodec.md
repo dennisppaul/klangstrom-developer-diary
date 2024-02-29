@@ -4,7 +4,7 @@ title:  "KLST_PANDA + AudioCodec"
 date:   2024-02-29 10:00:00 +0100
 ---
 
-wow, this was a *tour de force*.
+![KLST_PANDA+AudioCodec-WM8904-WM8731](/assets/2024-02-29-KLST_PANDA+AudioCodec-WM8904-WM8731.jpg)wow, this was a *tour de force*.
 
 i was REALLY struggling with the new audio codec! i had moved on from `WM8731`[^1] to `WM8904` because `WM8731` was [discontinued by Cirrus Logic](https://www.cirrus.com/products/wm8731/). and as so often in this world, the new audio codec is 1.000.000× more complex.
 
