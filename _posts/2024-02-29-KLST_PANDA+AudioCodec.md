@@ -39,7 +39,7 @@ see chapter "FREQUENCY LOCKED LOOP (FLL)" ( WM8904 datasheet[^3], p104ff )
 
 ## Starting Up WM8904
 
-```cpp
+```
 void setup_FLL() {
     //                                               FLL Disable
     WM8904_write_register(WM8904_R116_FLL_CONTROL_1, 0x0000);
