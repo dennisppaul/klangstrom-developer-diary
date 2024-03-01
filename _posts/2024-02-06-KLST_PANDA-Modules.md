@@ -14,6 +14,6 @@ date:   2024-02-06 10:00:00 +0100
 8. [x] SD Card
 9. [x] IDC serial connector
 10. [x] USB device + host
-11. [ ] ADC + DAC
-12. [ ] MIDI
+11. [x] ADC + DAC
+12. [x] MIDI
 13. [ ] on-board microphone
