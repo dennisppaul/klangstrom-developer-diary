@@ -12,11 +12,17 @@ i am still struggling with one fundamental decision and that is whether i should
 
 these are the sections or modules i want to test:
 
+## MCU
+
+- STM32H723ZGT
+
 ## display
 
+- 4.3" 480×272
+- capacitive touch interface (ADS7843)
+- LTDC interface ( parallel ) 
 - dimming backlight (FAN5333) with PWM + [40-pin TFT Friend - FPC Breakout with LED Backlight Driver](https://github.com/adafruit/Adafruit-40-pin-TFT-Friend)
     - see [Controlling 3.5" TFT Through PWM](https://forums.adafruit.com/viewtopic.php?f=22&p=639916)
-- capacitive touch interface (ADS7843)
 - parallel LTDC interface ( is external memory required? )
 - decide ( and order ) displays (13×) ( see [research.KLST_PANDA--TFTs.md](/Users/dennisppaul/Documents/dennisppaul/projects/klangstrom/hardware/KLST_PANDA/research.KLST_PANDA--TFTs/research.KLST_PANDA--TFTs.md) )
 
@@ -33,6 +39,11 @@ these are the sections or modules i want to test:
 - test with battery *type 18650*
 - can the circuit charge and supply power simultanously?
 - do we need a hardware on/off-switch? or can this also be done in software?
+- with PCB mounted holder e.g [MY-18650-01](https://jlcpcb.com/partdetail/Myoung-MY_1865001/C2979183)
+
+## on/off switch
+
+"just thought that when we have a battery on board there might be the need to be able to switch the power supply on or off"
 
 ## USB-C
 
@@ -52,66 +63,39 @@ these are the sections or modules i want to test:
 
 ## ADC+DAC
 
-- test ADC
-- test DAC
+- DAC(1×)+ADC(3×)
+- connection to modular synth?!?
+- 12V tolerant ( or modular connection as extension board = 0.0—3.3V > -12.0–12.0V + -1.0–1.0V>-5.0>5.0V(?) )
 
 ## microphone
 
 - test MEMS microphone ( via I2S )
 - with [Adafruit I2S MEMS Microphone Breakout - SPH0645LM4H](https://www.adafruit.com/product/3421)
+- e.g [GMA4030H11-F26](https://jlcpcb.com/partdetail/Inghai-GMA4030H11F26/C498193)
 
----
+## GPIO
+- what layout?
+- maybe case with fake shrouded connectors ( see IDC housing )
+- only 2 LEDs ( with PWM )
 
-@todo(elaborate on the details)
-@todo(see `2022-07-19-KLST_PANDA_starting_design_phase.md` )
+## buttons
 
-- MCU: STM32H723ZGT
-- display
-    - 4.3" 480×272
-    - capacitive touch ( ADS7843 )
-    - dimmable backlight ( PWM+FAN5333 )
-    - LTDC interface ( parallel ) 
-- rechargable battery
-    - type 18650
-    - with PCB mounted holder e.g [MY-18650-01](https://jlcpcb.com/partdetail/Myoung-MY_1865001/C2979183)
-    - recharging circuit? 
-    - see `KLST_GRASS`
-- USB-C
-    - 2×
-    - one for charging
-    - one for USB Device/Host devices
-- audio codec
-    - WM8904
-- external memory 
-    - APS12808L-3OBM-BA
-    - Octo-SPI/HyperRAM™ interface
-- SDCard
-    - 4-bit wide bus
-    - with card detect
-- microphone
-    - MEMS microphone ( via I2S )
-    - e.g [GMA4030H11-F26](https://jlcpcb.com/partdetail/Inghai-GMA4030H11F26/C498193)
-- DAC+ADC
-    - DAC(1×)+ADC(3×)
-    - connection to modular synth?!?
-    - 12V tolerant ( or modular connection as extension board = 0.0—3.3V > -12.0–12.0V + -1.0–1.0V>-5.0>5.0V(?) )
-- GPIO
-    - what layout?
-    - maybe case with fake shrouded connectors ( see IDC housing )
-- LEDs
-    - only 3 LEDs
-- buttons
-    - reset, boot, programmer
-- mechanical keybord keys
-    - 2×
-    - just below encoders?
-- programmer interface
-    - STD14
-    - pogo pin connector ( without housing on front-side )
-- case+shape
-    - switch?
-    - portrait mode?
-    - something unique!!!
-    - hole for a strap
-    - black&white PCB
-- on/off switch(?) "just thought that when we have a battery on board there might be the need to be able to switch the power supply on or off"
+- reset, boot, programmer
+
+## mechanical keyboard keys
+
+- 2×
+- just below encoders?
+
+## programmer interface
+
+- STD14
+- pogo pin connector ( without housing on front-side )
+
+## case + shape
+
+- switch?
+- portrait mode?
+- something unique!!!
+- hole for a strap
+- black&white PCB

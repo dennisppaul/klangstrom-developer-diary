@@ -4,9 +4,9 @@ title:  "KLST_PANDA + SD Card"
 date:   2024-03-02 10:00:00 +0100
 ---
 
+SD card is working just fine. 
 
-
----
+even FatFS library was more or less easy to setup. the only slightly jerky part was configuring the library to work with DMA. 
 
 ## FatFS with DMA
 
