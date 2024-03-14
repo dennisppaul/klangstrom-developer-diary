@@ -18,12 +18,12 @@ a quick round up shows that the following KLST_PANDA GPIO pins are usable for pe
 |      | GPIO_EXTI2  | GPIO_01 + 16             |         
 |      | GPIO_EXTI3  | GPIO_00 + 15             |         
 |      | GPIO_EXTI4  | GPIO_07 + 11 + 12 + 14   |         
-| PG5  | GPIO_EXTI5  | _ENCODER_00_BUTTON       | 
+|      | GPIO_EXTI5  |                          | 
 |      | GPIO_EXTI6  |                          |         
 |      | GPIO_EXTI7  |                          |         
 |      | GPIO_EXTI8  |                          |         
 |      | GPIO_EXTI9  |                          |         
-|      | GPIO_EXTI10 |                          |         
+| PA10 | GPIO_EXTI10 | _ENCODER_00_BUTTON       |         
 | PB11 | GPIO_EXTI11 | _ENCODER_01_BUTTON       | 
 |      | GPIO_EXTI12 |                          |         
 | PD13 | GPIO_EXTI13 | _DISPLAY_TOUCH_INTERRUPT |

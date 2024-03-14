@@ -8,5 +8,5 @@ here i will shamelessly collect all the things that are wrong, not ideal or not 
 
 - @module(battery) SS14 diode which i added as polarity protection prevents the battery from charging. @fix(remove diode and replaced with solder bridge )
 - outer PCB layers ( top and bottom ) have no copper pour ( they got lost when uploading files a second time ). @fix(take extra care to add pours next iteration)
-- @module(IDC_Serial) UART and IDC connectors are crossed ( `UART9` is actually `SERIAL_00` and `UART8` is `SERIAL_01` )
 - @module(on-board_microphone) missing decoupling capacitors at right ( i.e on-off switch side ) microphone
+- @module(audio_codec) some units must receive 3.3V instead of 1.8V
