@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "KLST_PANDA-unboxing"
+title:  "KLST_PANDA Unboxing"
 date:   2024-01-30 18:00:00 +0100
 ---
 

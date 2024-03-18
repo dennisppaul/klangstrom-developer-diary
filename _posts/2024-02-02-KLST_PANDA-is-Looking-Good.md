@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "KLST_PANDA-is-Looking-Good"
+title:  "KLST_PANDA is Looking Good"
 date:   2024-02-02 08:00:00 +0100
 ---
 
