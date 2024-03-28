@@ -23,7 +23,7 @@ and to take a bit of a more optimistic perspective on this affair: since a few m
 - added GPIOs @date(23:30 2024-03-16) ( 1h )
 - completed and ordered board @date(21:30 2024-03-17) ( 1h )
 
-i order 10 fully assembled boards and including taxes, customs and shipping costs each board should cost around 35.00EUR. which is not super cheap but at such low quantities is ok-ish.
+i ordered 10 fully assembled boards and including taxes, customs and shipping costs each board should cost around 35.00EUR. which is not super cheap but at such low quantities is ok-ish.
 
 ## features
 
